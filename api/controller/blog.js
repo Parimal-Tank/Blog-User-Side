@@ -39,8 +39,20 @@ const getblogDataById = (req, res , next) => {
     })
 }
 
+const searchBlog = async (req , res , next) => {
+    
+    let data = await Blog.find( {
+        "$or" : [
+            { title : {$regex : req.query.title}}
+        ]
+    })
+
+    res.render('index' , { blogData : data})
+}
+
 
 module.exports = {
     getblogdata ,
-    getblogDataById
+    getblogDataById,
+    searchBlog
 }
