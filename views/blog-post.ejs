@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>DevBlog - Bootstrap 5 Blog Template For Developers</title>
+    <title>Welcome to our Blog</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -31,6 +31,7 @@
 		<%- include('partials/menubar.ejs') -%>
     </header>
     
+	<!-- Blog Section -->
     <div class="main-wrapper">
 	    
 	    <article class="blog-post px-3 py-5 p-md-5">
@@ -55,79 +56,24 @@
 				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				
-				<!-- <div class="blog-comments-section">
-					<div id="disqus_thread"></div>
-					<script> -->
-					    <!-- /**
-					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-					     *  PLATFORM OR CMS.
-					     *  
-					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-					     *  https://disqus.com/admin/universalcode/#configuration-variables
-					     */
-					    /*
-					    var disqus_config = function () {
-					        // Replace PAGE_URL with your page's canonical URL variable
-					        this.page.url = PAGE_URL;  
-					        
-					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-					        this.page.identifier = PAGE_IDENTIFIER; 
-					    };
-					    */
-					     -->
-					    <!-- (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-					        var d = document, s = d.createElement('script');
-					        
-					        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
-					        s.src = 'https://3wmthemes.disqus.com/embed.js';
-					        
-					        s.setAttribute('data-timestamp', +new Date());
-					        (d.head || d.body).appendChild(s);
-					    })();
-					</script>
-					<noscript>
-					    Please enable JavaScript to view the 
-					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-					        comments powered by Disqus.
-					    </a>
-					</noscript>
-				</div> -->
-				<!--//blog-comments-section-->
-				
 		    </div>
 			<!--//container-->
 	    </article>
 	    
-	    <!-- <section class="promo-section theme-bg-light py-5 text-center">
-		    <div class="container">
-			    <h2 class="title">Promo Section Heading</h2>
-			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-                <figure class="promo-figure">
-			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="../assets/images/promo-banner.jpg" alt="image"></a>
-			    </figure>
-		    </div> -->
-			<!--//container-->
-	    <!-- </section> -->
-		<!--//promo-section-->
-	    
 	    <footer class="footer text-center py-2 theme-bg-dark">
-		   
-	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
 			<small class="copyright">Copyright by&nbsp;<i class="fa-solid fa-copyright"></i>&nbsp;<a href="/" target="_blank">Parimal Tank</a></small>
-		   
 	    </footer>
     
     </div><!--//main-wrapper-->
     
 
 	<script>
+
+		// for Tinymce Html to Normal Tax Converter
 		  $('.blogdescription').each(function(){
                 let textConvert = $(this).text();
                 let temp = $(this).html(textConvert); 
             })
-
-
 			console.log("This is Date" + `<%= blogData.createdAt %>`);
 	</script>
         

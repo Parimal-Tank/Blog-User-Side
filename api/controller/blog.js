@@ -2,13 +2,13 @@ const mongoose = require('mongoose');
 const Blog = require('../models/blogModel');
 
 
+
+// GET Blog Details
 const getblogdata = async (req , res , next) => {
 
     Blog.find()
     .exec()
     .then(result => {
-
-            // res.status(200).json(responce.blogs);
 
              res.render('index' , {blogData : result}); 
         
@@ -20,7 +20,7 @@ const getblogdata = async (req , res , next) => {
         })
 }
 
-
+// GET Blog Deetails By Id
 const getblogDataById = (req, res , next) => {
     const id = req.params.id;
  
@@ -28,8 +28,6 @@ const getblogDataById = (req, res , next) => {
     .then(result => {
 
              res.render('blog-post' ,{blogData : result});
-
-            // res.status(200).json({result : result});
 
         })
     .catch(err => {
@@ -39,11 +37,12 @@ const getblogDataById = (req, res , next) => {
     })
 }
 
+// Search Functionality 
 const searchBlog = async (req , res , next) => {
     
     let data = await Blog.find( {
         "$or" : [
-            { title : {$regex : req.query.title}}
+            { title : {$regex : req.query.title}}  // title wise search
         ]
     })
 

@@ -23,9 +23,6 @@ const blogRouts = require('./api/Routs/blogRouts')
 
 app.use('/blog' , blogRouts);
 
-// app.get('/' , (req , res) => {
-//     res.render('index');
-// })
 
 databaseConnection(app);
 
