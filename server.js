@@ -24,6 +24,10 @@ const blogRouts = require('./api/Routs/blogRouts')
 app.use('/blog' , blogRouts);
 
 
+app.get('/' , (req , res) => {
+     res.redirect('/blog/allblog');
+})
+
 databaseConnection(app);
 
 module.exports = app

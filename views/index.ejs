@@ -48,7 +48,15 @@
 						    <h3 class="title mb-1"><a class="text-link" href="/blog/<%= blogData[i]._id %>/<%= blogData[i].slug %>"><%= blogData[i].title %></a></h3>
 							<div href="#" class="category meta mb-1"><b><span><%= blogData[i].category %></b></span> </div>
 						    <div class="meta mb-1"><span class="date">Published Date <%= blogData[i].createdAt.getDate() %> / <%= blogData[i].createdAt.getMonth() + 1 %> / <%= blogData[i].createdAt.getFullYear() %> </span><span class="time">5 min read</span><span class="comment"><a class="text-link" href="#">8 comments</a></span></div>
-						    <div class="intro blogdescription"><%= blogData[i].description %></div>
+
+							<div class="card-group">
+								<div class="card">
+								  <div class="card-body" style="height: 250px; overflow: hidden; text-overflow: ellipsis;">
+									<div class="intro blogdescription h-25"><%= blogData[i].description %></div>
+								  </div>
+								</div>
+							</div>
+						   
 						    <a class="text-link read-more" href="/blog/<%= blogData[i]._id %>/<%= blogData[i].slug %>" data-id="<%= blogData[i]._id %>">Read more &rarr;</a>
 					    </div><!--//col-->
 				    </div><!--//row-->
